@@ -46,7 +46,7 @@ function alterItem({id, imagem, nome, preco, cor, categoria, tamanho}){
         const object = Object.fromEntries(objectData);
         object.tamanho = tamanhos;
 
-        const fetchData = await fetch(`https://frontback-integration.onrender.com/api/v1/products/${id}`, {
+        const fetchData = await fetch(`http://localhost:8000/api/v1/products/${id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json"

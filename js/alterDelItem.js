@@ -16,7 +16,7 @@ form.addEventListener("input", (event) => {
     list.innerHTML = '';
 
     if (searchTerm.length > 0) {
-      const dataFetch = await fetch("https://frontback-integration.onrender.com/api/v1/products");
+      const dataFetch = await fetch("http://localhost:8000/api/v1/products");
       const data = await dataFetch.json();
       allData = data.data;
       allItems = data.data.filter((el) =>

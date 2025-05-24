@@ -32,11 +32,11 @@ const renderContent = (sapatos) => {
 }
 
 async function fetchData() {
-  const dataFetch = await fetch("https://frontback-integration.onrender.com/api/v1/products");
+  const dataFetch = await fetch("http://localhost:8000/api/v1/products");
   const data = await dataFetch.json();
 
   sapatos = data.data;
-  renderContent(data.data);
+  renderContent(sapatos);
 }
 
 filter.addEventListener('change', (event)=>{

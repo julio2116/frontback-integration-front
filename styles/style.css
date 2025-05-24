@@ -72,4 +72,11 @@ button{
     font-size: 16px;
     font-weight: 800;
     font-family: sans-serif;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.buttons{
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
