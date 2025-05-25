@@ -51,7 +51,7 @@ function dragNDrop(list) {
                     
                     alterItem(...[data.data])
                 }
-                list.innerHTML = '';
+                list.innerHTML = 'Viwer';
                 list.style.display = 'none';
                 searchBar.value = '';
                 fetchData()
