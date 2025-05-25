@@ -30,7 +30,7 @@ function teste(list) {
             if (zona.id === 'view') {
                 async function fetchData() {
                     zona.classList.remove('dragover')
-                    const dataFetch = await fetch(`http://localhost:8000/api/v1/products/${event.dataTransfer.getData('text')}`);
+                    const dataFetch = await fetch(`https://frontback-integration.onrender.com/api/v1/products/${event.dataTransfer.getData('text')}`);
                     const data = await dataFetch.json();
                     // return data.data
                     zona.innerHTML = '';
@@ -59,7 +59,7 @@ function teste(list) {
                 const confirmation = confirm('Tem certeza que deseja apagar?');
                 if (!confirmation) return
                 async function deleteItem() {
-                    const dataFetch = await fetch(`http://localhost:8000/api/v1/products/${event.dataTransfer.getData('text')}`, {
+                    const dataFetch = await fetch(`https://frontback-integration.onrender.com/api/v1/products/${event.dataTransfer.getData('text')}`, {
                         method: 'DELETE',
                     });
                     const data = await dataFetch.json();

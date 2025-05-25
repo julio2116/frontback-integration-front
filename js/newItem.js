@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
   data.tamanho = tamanhos;
 
   async function createNewItem(item) {
-    const sendFetch = await fetch("http://localhost:8000/api/v1/products", {
+    const sendFetch = await fetch("https://frontback-integration.onrender.com/api/v1/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
