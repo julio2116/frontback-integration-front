@@ -32,7 +32,6 @@ function teste(list) {
                     zona.classList.remove('dragover')
                     const dataFetch = await fetch(`https://frontback-integration.onrender.com/api/v1/products/${event.dataTransfer.getData('text')}`);
                     const data = await dataFetch.json();
-                    // return data.data
                     zona.innerHTML = '';
                     let { id, imagem, nome, preco } = data.data;
                     preco = preco.toString().replace(".", ",")
@@ -70,6 +69,7 @@ function teste(list) {
             list.innerHTML = '';
             list.style.display = 'none';
             searchBar.value = '';
+            window.location.reload();
         });
     });
 }
