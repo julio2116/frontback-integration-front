@@ -1,5 +1,4 @@
-import testeObject from './dragnDrop.js';
-const { teste } = testeObject;
+import dragNDrop from './dragnDrop.js';
 
 const form = document.querySelector("form");
 let list = document.querySelector("#items-container");
@@ -44,14 +43,13 @@ form.addEventListener("input", (event) => {
         if (eventsExistents){
           return;
         }
-        teste(list);
+        dragNDrop(list);
         eventsExistents = true;
       })()
     }
 
     if (list) {
       list.addEventListener("click", (event) => {
-        console.log('clicou')
         const searchBar = document.querySelector("#search-bar");
         searchBar.value = event.target.innerText;
 

@@ -17,8 +17,7 @@ form.addEventListener("submit", (event) => {
       body: JSON.stringify(item),
     });
     const dataReceived = await sendFetch.json();
-    console.log(dataReceived)
-    alert(`Success creating new item: ${dataReceived.data.nome}`)
+    alert(`Success creating new item: ${dataReceived.data.nome}`);
   }
   createNewItem(data);
 });

@@ -1,6 +1,6 @@
 import alterItem from './alterItem.js';
 
-function teste(list) {
+function dragNDrop(list) {
     const zonas = document.querySelectorAll('.zona');
     const searchBar = document.querySelector('#search-bar');
 
@@ -51,6 +51,9 @@ function teste(list) {
                     
                     alterItem(...[data.data])
                 }
+                list.innerHTML = '';
+                list.style.display = 'none';
+                searchBar.value = '';
                 fetchData()
             }
 
@@ -63,18 +66,16 @@ function teste(list) {
                     });
                     const data = await dataFetch.json();
                     alert(data.status);
-                    window.location.reload();
+                    list.innerHTML = '';
+                    zona.classList.remove('dragover')
                 }
                 deleteItem()
+                list.style.display = 'none';
+                searchBar.value = '';
             }
-            // list.innerHTML = '';
-            // list.style.display = 'none';
-            // searchBar.value = '';
         });
     });
 }
 
 
-export default {
-    teste
-}
+export default dragNDrop

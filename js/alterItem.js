@@ -60,7 +60,7 @@ function alterItem({id, imagem, nome, preco, cor, categoria, tamanho}){
         formEl.addEventListener('submit', (event)=>{
             event.preventDefault();
             patchItem();
-            window.location.reload();
+            view.innerHTML = '';
         })
     }
 
