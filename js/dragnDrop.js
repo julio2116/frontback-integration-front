@@ -50,7 +50,6 @@ function teste(list) {
                     div.appendChild(document.createElement('span')).textContent = preco;
                     
                     alterItem(...[data.data])
-                    window.location.reload();
                 }
                 fetchData()
             }
@@ -63,10 +62,10 @@ function teste(list) {
                         method: 'DELETE',
                     });
                     const data = await dataFetch.json();
-                    alert(data.status)
+                    alert(data.status);
+                    window.location.reload();
                 }
                 deleteItem()
-                window.location.reload();
             }
             // list.innerHTML = '';
             // list.style.display = 'none';
