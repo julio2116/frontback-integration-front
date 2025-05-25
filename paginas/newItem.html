@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
     <title>New item</title>
-</head>
-<body>
-    <h1>Cadastre um novo item</h1>
-    <form action="">
+  </head>
+  <body>
+    <main class="form-parent">
+      <h1>Cadastre um novo item</h1>
+      <form action="">
         <div class="form-input">
-            <label for="nome">Nome:</label>
-            <input required type="text" id="nome" name="nome">
+          <label for="nome">Nome:</label>
+          <input required type="text" id="nome" name="nome" />
         </div>
-        <div class="form-input-size" >
-            <label for="tamanho">Tamanho:</label>
-            <input required type="text" name="tamanho">
-            <input type="text" name="tamanho">
-            <input type="text" name="tamanho">
-            <input type="text" name="tamanho">
-        </div>
-        <div class="form-input">
-            <label for="preco">Preço:</label>
-            <input required type="text" id="preco" name="preco">
+        <div class="form-input-size">
+          <label for="tamanho">Tamanho:</label>
+          <input required type="text" name="tamanho" />
+          <input type="text" name="tamanho" />
+          <input type="text" name="tamanho" />
+          <input type="text" name="tamanho" />
         </div>
         <div class="form-input">
-            <label for="cor">Cor:</label>
-            <input required type="text" id="cor" name="cor">
+          <label for="preco">Preço:</label>
+          <input required type="text" id="preco" name="preco" />
         </div>
         <div class="form-input">
-            <label for="categoria">Categoria:</label>
-            <input required type="text" id="categoria" name="categoria">
+          <label for="cor">Cor:</label>
+          <input required type="text" id="cor" name="cor" />
         </div>
         <div class="form-input">
-            <label for="imagem">Imagem:</label>
-            <input required type="text" id="imagem" name="imagem">
+          <label for="categoria">Categoria:</label>
+          <input required type="text" id="categoria" name="categoria" />
+        </div>
+        <div class="form-input">
+          <label for="imagem">Imagem:</label>
+          <input required type="text" id="imagem" name="imagem" />
         </div>
         <button>Cadastrar</button>
-    </form>
+      </form>
+    </main>
     <script src="../js/newItem.js"></script>
-</body>
+  </body>
 </html>
