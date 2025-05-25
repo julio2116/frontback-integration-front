@@ -48,8 +48,9 @@ function teste(list) {
 
                     div.appendChild(document.createElement('span')).textContent = nome;
                     div.appendChild(document.createElement('span')).textContent = preco;
-
+                    
                     alterItem(...[data.data])
+                    window.location.reload();
                 }
                 fetchData()
             }
@@ -65,11 +66,11 @@ function teste(list) {
                     alert(data.status)
                 }
                 deleteItem()
+                window.location.reload();
             }
-            list.innerHTML = '';
-            list.style.display = 'none';
-            searchBar.value = '';
-            window.location.reload();
+            // list.innerHTML = '';
+            // list.style.display = 'none';
+            // searchBar.value = '';
         });
     });
 }
